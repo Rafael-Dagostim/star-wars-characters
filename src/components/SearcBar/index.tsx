@@ -1,15 +1,17 @@
-import React from 'react'
-import { useSwapiApiContext } from '../../hooks';
-import { Box } from '../Box';
-import { SearchBarStyle } from './style';
+import React, { ChangeEventHandler } from 'react'
+import { SearchBarStyle, SearchInputStyle, SearchIconStyle } from './style';
 
-export const SearchBar = () => {
-  const { characters } = useSwapiApiContext();
+import SearchIconSvg from '../../assets/SearchIcon.svg'
 
+interface Prop {
+  onChange: (value: string) => void
+}
+
+export const SearchBar = ({ onChange }: Prop) => {
   return (
-    <Box remWidth={12} remHeight={20}>
-      {/* <img src="../../assets/SearchIcon.svg" alt="" /> */}
-      <SearchBarStyle placeholder='Digite o nome do personagem' />
-    </Box>
+    <SearchBarStyle>
+      <SearchIconStyle src={SearchIconSvg} />
+      <SearchInputStyle placeholder='Digite o nome do personagem' onChange={(event) => onChange(event.target.value)} />
+    </SearchBarStyle>
   )
 }
