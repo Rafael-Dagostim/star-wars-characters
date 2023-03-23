@@ -5,6 +5,8 @@ import { Home } from './pages/Home';
 import { CharacterInfo } from './pages/CharacterInfo';
 import { NotFound } from './pages/NotFound';
 
+import './fonts.css'
+
 function App() {
   return (
     <div className="App">

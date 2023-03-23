@@ -1,0 +1,9 @@
+@font-face {
+  font-family: StarJedi;
+  src: url('./assets/fonts/StarJedi.ttf');
+}
+
+@font-face {
+  font-family: StarJediHollow;
+  src: url('./assets/fonts/StarJediHollow.ttf');
+}
