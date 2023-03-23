@@ -1,14 +1,20 @@
-import React, { ReactNode, useEffect, useState } from 'react';
-import { SwapiApiContext } from './context';
-import { Character, Film } from '../../types';
-import { swapiApiService } from '../../services';
+import { createContext, ReactNode, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
+import { Character, Film } from '../types';
+import { swapiApiService } from '../services';
 
-type Props = {
+interface ContextProps {
+  characters: Character[],
+  films: Film[],
+}
+
+type ProviderProps = {
   children: ReactNode;
 }
 
-export const SwapiApiProvider = ({ children }: Props) => {
+export const SwapiApiContext = createContext<ContextProps>({ characters: [], films: [] });
+
+export const SwapiApiProvider = ({ children }: ProviderProps) => {
   const [characters, setCharacters] = useState<Character[]>([])
   const [films, setFilms] = useState<Film[]>([])
 
@@ -17,14 +23,12 @@ export const SwapiApiProvider = ({ children }: Props) => {
 
   const loadAllFilms = async () => {
     const data = await swapiApiService.getAllFilms();
-    console.log(data);
     setFilms(data);
   }
 
   const loadAllCharacters = async () => {
     for (let i = INITIAL_PAGE; i <= TOTAL_PAGES; i++) {
       try {
-        if (i == 5) throw new Error('Teste')
         const data = await swapiApiService.getCharactersByPage(i)
         setCharacters((curr) => curr.concat(data));
       } catch (error) {
