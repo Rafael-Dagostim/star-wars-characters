@@ -30,5 +30,5 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Spline Sans Mono', monospace;
     color: white;
     font-weight: 400;
-}
+  }
 `

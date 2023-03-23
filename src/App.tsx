@@ -1,14 +1,19 @@
-import { SearchBar } from './components/SearcBar';
 import { SwapiApiProvider } from './contexts/SwapiApiContext';
-import "react-toastify/dist/ReactToastify.css";
-import { Box } from './components/Box';
+import 'react-toastify/dist/ReactToastify.css';
+import { Route, Routes } from 'react-router-dom';
+import { Home } from './pages/Home';
+import { CharacterInfo } from './pages/CharacterInfo';
+import { NotFound } from './pages/NotFound';
 
 function App() {
   return (
     <div className="App">
       <SwapiApiProvider>
-        <Box remHeight={20} remWidth={8}></Box>
-        <SearchBar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='character/:index' element={<CharacterInfo />} />
+          <Route path='/*' element={<NotFound />} />
+        </Routes>
       </SwapiApiProvider>
     </div>
   )
