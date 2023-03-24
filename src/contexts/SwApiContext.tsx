@@ -43,7 +43,6 @@ export const SwApiProvider = ({ children }: ProviderProps) => {
   }
 
   useEffect(() => {
-    console.log('AOPA');
     setIsLoadingCharacters(true);
     loadAllCharacters().then(() => setIsLoadingCharacters(false));
     loadAllFilms();
