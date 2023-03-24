@@ -236,7 +236,7 @@ Error generating stack: `+i.message+`
 `,Jv=We.img`
   width: 1rem;
   height: 1rem;
-`,qv="/star-wars-characters/assets/SearchIcon-9df3a13a.svg",Zv=({onChange:e})=>tt(Yv,{children:[U(Jv,{src:qv}),U(Xv,{placeholder:"Digite o nome do personagem",onChange:t=>e(t.target.value)})]}),Ba=()=>{const e=x.useContext($h);if(!e)throw new Error("OUT_OF_CONTEXT");return e},bv=We.section`
+`,qv="/assets/SearchIcon-9df3a13a.svg",Zv=({onChange:e})=>tt(Yv,{children:[U(Jv,{src:qv}),U(Xv,{placeholder:"Digite o nome do personagem",onChange:t=>e(t.target.value)})]}),Ba=()=>{const e=x.useContext($h);if(!e)throw new Error("OUT_OF_CONTEXT");return e},bv=We.section`
   width: 100%;
   height: 100%;
   gap: 2rem;
@@ -257,7 +257,7 @@ Error generating stack: `+i.message+`
     color: #D0E10C;
     cursor: pointer;
   }
-`,nw="/star-wars-characters/assets/Arrow-667344d0.svg",rw=()=>{const e=Ea();return U(tw,{children:U("img",{src:nw,alt:"Voltar",onClick:()=>e("/")})})},Lf={1:"i",4:"iv",5:"v",9:"ix",10:"x",40:"xl",50:"l",90:"xc",100:"c",400:"cd",500:"d",900:"cm",1e3:"m"},ow=e=>{let t="";const n=Object.keys(Lf).map(r=>parseInt(r)).sort((r,o)=>o-r);for(const r of n)for(;e>=r;)t+=Lf[r],e-=r;return t},iw={blue:"azul",yellow:"amarelo",red:"vermelho",brown:"castanho","blue-gray":"azul-cinzento",black:"preto",orange:"laranja",hazel:"avelã",pink:"rosa",unknown:"desconhecido","red, blue":"vermelho, azul",gold:"dourado","green, yellow":"verde, amarelo",white:"branco"},lw=e=>iw[e]||"N/A",sw={male:"masculino",female:"feminino",hermaphrodite:"hermafrodita",none:"nenhum"},uw=e=>sw[e]||"N/A",aw=We.div`
+`,nw="/assets/Arrow-667344d0.svg",rw=()=>{const e=Ea();return U(tw,{children:U("img",{src:nw,alt:"Voltar",onClick:()=>e("/")})})},Lf={1:"i",4:"iv",5:"v",9:"ix",10:"x",40:"xl",50:"l",90:"xc",100:"c",400:"cd",500:"d",900:"cm",1e3:"m"},ow=e=>{let t="";const n=Object.keys(Lf).map(r=>parseInt(r)).sort((r,o)=>o-r);for(const r of n)for(;e>=r;)t+=Lf[r],e-=r;return t},iw={blue:"azul",yellow:"amarelo",red:"vermelho",brown:"castanho","blue-gray":"azul-cinzento",black:"preto",orange:"laranja",hazel:"avelã",pink:"rosa",unknown:"desconhecido","red, blue":"vermelho, azul",gold:"dourado","green, yellow":"verde, amarelo",white:"branco"},lw=e=>iw[e]||"N/A",sw={male:"masculino",female:"feminino",hermaphrodite:"hermafrodita",none:"nenhum"},uw=e=>sw[e]||"N/A",aw=We.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -365,4 +365,4 @@ Error generating stack: `+i.message+`
   width:100%;
   height:100%;
   gap: 2rem;
-`,gw=()=>{const{characters:e,isLoadingCharacters:t}=Ba(),[n,r]=x.useState(null);Ea();const{index:o}=Yy();return x.useEffect(()=>{e[Number(o)]&&r(e[Number(o)])},[e]),tt(yw,{children:[U(Ih,{}),U(rw,{}),t&&U(zh,{}),!t&&n&&tt(sm,{children:[U(fw,{character:n}),U(mw,{character:n})]})]})};function vw(){return U("div",{className:"App",children:U(jv,{children:tt(i1,{children:[U(fu,{path:"character/:index",element:U(gw,{})}),U(fu,{path:"/*",element:U(ew,{})})]})})})}hs.createRoot(document.getElementById("root")).render(tt(Y.StrictMode,{children:[U(Cg,{}),U(c1,{children:U(vw,{})}),U(hu,{position:"top-right",autoClose:5e3,hideProgressBar:!1,newestOnTop:!1,closeOnClick:!0,rtl:!1,pauseOnFocusLoss:!0,draggable:!0,pauseOnHover:!0,theme:"dark"})]}));
+`,gw=()=>{const{characters:e,isLoadingCharacters:t}=Ba(),[n,r]=x.useState(null);Ea();const{index:o}=Yy();return x.useEffect(()=>{e[Number(o)]&&r(e[Number(o)])},[e]),tt(yw,{children:[U(Ih,{}),U(rw,{}),t&&U(zh,{}),!t&&n&&tt(sm,{children:[U(fw,{character:n}),U(mw,{character:n})]})]})};function vw(){return U("div",{className:"App",children:U(jv,{children:tt(i1,{children:[U(fu,{path:"/*",element:U(ew,{})}),U(fu,{path:"character/:index",element:U(gw,{})})]})})})}hs.createRoot(document.getElementById("root")).render(tt(Y.StrictMode,{children:[U(Cg,{}),U(c1,{children:U(vw,{})}),U(hu,{position:"top-right",autoClose:5e3,hideProgressBar:!1,newestOnTop:!1,closeOnClick:!0,rtl:!1,pauseOnFocusLoss:!0,draggable:!0,pauseOnHover:!0,theme:"dark"})]}));
