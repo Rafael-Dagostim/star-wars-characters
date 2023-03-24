@@ -13,9 +13,9 @@ type ProviderProps = {
   children: ReactNode;
 }
 
-export const SwapiApiContext = createContext<ContextProps>({ characters: [], films: [], isLoadingCharacters: false });
+export const SwApiContext = createContext<ContextProps>({ characters: [], films: [], isLoadingCharacters: false });
 
-export const SwapiApiProvider = ({ children }: ProviderProps) => {
+export const SwApiProvider = ({ children }: ProviderProps) => {
   const [characters, setCharacters] = useState<Character[]>([])
   const [films, setFilms] = useState<Film[]>([])
   const [isLoadingCharacters, setIsLoadingCharacters] = useState<boolean>(false)
@@ -47,6 +47,6 @@ export const SwapiApiProvider = ({ children }: ProviderProps) => {
   }, [])
 
   return (
-    <SwapiApiContext.Provider value={{ characters, films, isLoadingCharacters }}>{children}</SwapiApiContext.Provider>
+    <SwApiContext.Provider value={{ characters, films, isLoadingCharacters }}>{children}</SwApiContext.Provider>
   )
 }

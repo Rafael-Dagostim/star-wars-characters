@@ -2,11 +2,12 @@ import styled from 'styled-components';
 
 export const CharacterListStyle = styled.section`
   display: flex;
+  padding: 0.5rem;
   flex-direction: column;
-  justify-content: space-around;
   width: 40rem;
   max-height: 31rem;
   overflow: auto;
+  gap: 0.3rem;
 
   @media screen and (max-width: 768) {
     width: 100%;

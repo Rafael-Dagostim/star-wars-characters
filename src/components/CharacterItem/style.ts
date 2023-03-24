@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const CharacterItemStyle = styled.div`
-  margin: 0.5rem;
-  width: 90%;
+  width: 100%;
   height: 2.5rem;
   text-align: center;
   display: flex;

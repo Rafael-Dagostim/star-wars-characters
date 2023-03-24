@@ -1,22 +1,20 @@
-import { SwapiApiProvider } from './contexts/SwapiApiContext';
+import { SwApiProvider } from './contexts/SwApiContext';
 import 'react-toastify/dist/ReactToastify.css';
-import { Route, Routes, RoutesProps } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { CharacterInfo } from './pages/CharacterInfo';
-import { NotFound } from './pages/NotFound';
 
 import './fonts.css'
 
 function App() {
   return (
     <div className="App">
-      <SwapiApiProvider>
+      <SwApiProvider>
         <Routes>
-          <Route path='/' element={<Home />} />
           <Route path='character/:index' element={<CharacterInfo />} />
-          <Route path='/*' element={<NotFound />} />
+          <Route path='/*' element={<Home />} />
         </Routes>
-      </SwapiApiProvider>
+      </SwApiProvider>
     </div>
   )
 }

@@ -3,12 +3,12 @@ import { CharacterList } from '../../components/CharacterList'
 import { Header } from '../../components/Header'
 import { LoadingSpin } from '../../components/LoadingSpin'
 import { SearchBar } from '../../components/SearcBar'
-import { useSwapiApiContext } from '../../hooks'
+import { useSwApiContext } from '../../hooks'
 import { Character } from '../../types'
 import { HomeStyle } from './style'
 
 export const Home = () => {
-  const { characters, isLoadingCharacters } = useSwapiApiContext()
+  const { characters, isLoadingCharacters } = useSwApiContext()
 
   const [onDisplayCharacters, setOnDisplayCharacters] = useState<Character[]>(characters);
 

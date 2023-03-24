@@ -32,4 +32,18 @@ export const GlobalStyle = createGlobalStyle`
     color: white;
     font-weight: 400;
   }
+
+  ::-webkit-scrollbar {
+    width: 0.75rem;
+  }
+
+  ::-webkit-scrollbar-track {
+      /* background: yellow; */
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: rgba(37, 17, 147, 1);
+      border-radius: 0.2rem;
+      transition: background 0.4s ease-in;
+  }
 `

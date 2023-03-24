@@ -5,12 +5,12 @@ import { CharacterDescription } from '../../components/CharacterDescription';
 import { CharacterFilmList } from '../../components/CharacterFilmList';
 import { Header } from '../../components/Header';
 import LoadingSpin from '../../components/LoadingSpin';
-import { useSwapiApiContext } from '../../hooks';
+import { useSwApiContext } from '../../hooks';
 import { Character } from '../../types';
 import { CharacterInfoStyle } from './style';
 
 export const CharacterInfo = () => {
-  const { characters, isLoadingCharacters } = useSwapiApiContext();
+  const { characters, isLoadingCharacters } = useSwApiContext();
   const [character, setCharacter] = useState<Character | null>(null)
   const navigate = useNavigate();
   const { index } = useParams();

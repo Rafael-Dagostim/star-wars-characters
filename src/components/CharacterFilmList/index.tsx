@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSwapiApiContext } from '../../hooks'
+import { useSwApiContext } from '../../hooks'
 import { Character } from '../../types'
 import { CharacterFilmItem } from '../CharacterFilmItem/intex'
 import { CharacterFilmListStyle } from './style'
@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const CharacterFilmList = ({ character }: Props) => {
-  const { films } = useSwapiApiContext()
+  const { films } = useSwApiContext()
 
   const characterFilms = films
     .filter((film) => character.films.includes(film.url))
