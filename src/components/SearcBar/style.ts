@@ -18,7 +18,6 @@ export const SearchInputStyle = styled.input.attrs({ type: 'string' })`
   padding-left: 1rem;
   background: none;
   border: none;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: large;
   color: white;
   outline: none;

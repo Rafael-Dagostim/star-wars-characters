@@ -3,14 +3,14 @@ import { Character } from '../../types'
 import { CharacterItem } from '../CharacterItem'
 import { CharacterListStyle } from './style'
 
-interface Prop {
+interface Props {
   list: Character[]
 }
 
-export const CharacterList = ({ list }: Prop) => {
+export const CharacterList = ({ list }: Props) => {
   return (
     <CharacterListStyle>
-      {list.map((character, index) => <CharacterItem character={character} index={index} />)}
+      {list.map((character, index) => <CharacterItem character={character} index={index} key={index} />)}
     </CharacterListStyle>
   )
 }

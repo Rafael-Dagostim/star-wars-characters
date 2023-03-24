@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { CharacterList } from '../../components/CharacterList'
 import { Header } from '../../components/Header'
+import { LoadingSpin } from '../../components/LoadingSpin'
 import { SearchBar } from '../../components/SearcBar'
 import { useSwapiApiContext } from '../../hooks'
 import { Character } from '../../types'
 import { HomeStyle } from './style'
 
 export const Home = () => {
-  const { characters } = useSwapiApiContext()
+  const { characters, isLoadingCharacters } = useSwapiApiContext()
 
   const [onDisplayCharacters, setOnDisplayCharacters] = useState<Character[]>(characters);
 
@@ -26,6 +27,7 @@ export const Home = () => {
       <Header />
       <SearchBar onChange={handleCharacterFilter} />
       <CharacterList list={onDisplayCharacters} />
+      {isLoadingCharacters && <LoadingSpin/>}
     </HomeStyle>
   )
 }

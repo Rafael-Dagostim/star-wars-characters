@@ -6,27 +6,17 @@ export const CharacterDescriptionStyle = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 3rem;
+  padding-top: 1.5rem;
   gap: 2rem;
 
   section {
     display: flex;
-    gap: 1rem;
-  }
-`
-export const CharacterInfoStyle = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-
-  h4 {
-    color: white;
-    font-size: large;
-    font-weight: bold;
+    flex-direction: row;
+    gap: 4rem;
   }
 
-  span {
-    color: #D0E10C;
+  h1 {
+    font-size: 2rem;
   }
 `

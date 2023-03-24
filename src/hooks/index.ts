@@ -1,1 +1,1 @@
-export * from './useCharactersContext';
+export * from './useSwapiContext';

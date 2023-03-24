@@ -1,28 +1,20 @@
 import React from 'react'
 import { Character } from '../../types'
-import { CharacterDescriptionStyle, CharacterInfoStyle } from './styled'
+import { CharacterInfo } from '../CharacterInfo'
+import { CharacterDescriptionStyle } from './styled'
 
-interface Prop {
+interface Props {
   character: Character
 }
 
-export const CharacterDescription = ({character}: Prop) => {
+export const CharacterDescription = ({character}: Props) => {
   return (
     <CharacterDescriptionStyle>
       <h1>{ character.name }</h1>
       <section>
-        <CharacterInfoStyle>
-          <h4>Ano de Nascimento</h4>
-          <span>{ character.birth_year }</span>
-        </CharacterInfoStyle>
-        <CharacterInfoStyle>
-          <h4>Gênero</h4>
-          <span>{ character.gender }</span>
-        </CharacterInfoStyle>
-        <CharacterInfoStyle>
-          <h4>Cor dos Olhos</h4>
-          <span>{ character.eye_color }</span>
-        </CharacterInfoStyle>
+        <CharacterInfo title='ano de nascimento' value={character.birth_year} />
+        <CharacterInfo title='gênero' value={ character.gender }/>
+        <CharacterInfo title='cor dos olhos' value={ character.eye_color }/>
       </section>
     </CharacterDescriptionStyle>
   )

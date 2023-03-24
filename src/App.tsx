@@ -1,6 +1,6 @@
 import { SwapiApiProvider } from './contexts/SwapiApiContext';
 import 'react-toastify/dist/ReactToastify.css';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, RoutesProps } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { CharacterInfo } from './pages/CharacterInfo';
 import { NotFound } from './pages/NotFound';

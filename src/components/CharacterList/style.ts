@@ -6,4 +6,5 @@ export const CharacterListStyle = styled.section`
   flex-direction: column;
   justify-content: space-around;
   height: 50%;
+  overflow: auto;
 `
