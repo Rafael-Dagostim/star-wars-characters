@@ -187,7 +187,7 @@ Error generating stack: `+i.message+`
 `,Jv=We.img`
   width: 1rem;
   height: 1rem;
-`,Xv="/assets/SearchIcon-9df3a13a.svg",qv=({onChange:e})=>Ze(Gv,{children:[F(Jv,{src:Xv}),F(Yv,{placeholder:"Digite o nome do personagem",onChange:t=>e(t.target.value)})]}),Ha=()=>{const e=x.useContext(Ih);if(!e)throw new Error("OUT_OF_CONTEXT");return e},Zv=We.section`
+`,Xv="/star-wars-characters/assets/SearchIcon-9df3a13a.svg",qv=({onChange:e})=>Ze(Gv,{children:[F(Jv,{src:Xv}),F(Yv,{placeholder:"Digite o nome do personagem",onChange:t=>e(t.target.value)})]}),Ha=()=>{const e=x.useContext(Ih);if(!e)throw new Error("OUT_OF_CONTEXT");return e},Zv=We.section`
   width: 100%;
   height: 100%;
   display:flex;
@@ -202,7 +202,7 @@ Error generating stack: `+i.message+`
     color: #D0E10C;
     cursor: pointer;
   }
-`,tw="/assets/Arrow-667344d0.svg",nw=()=>{const e=nl();return F(ew,{children:F("img",{src:tw,alt:"Voltar",onClick:()=>e("/")})})},rw=We.div`
+`,tw="/star-wars-characters/assets/Arrow-667344d0.svg",nw=()=>{const e=nl();return F(ew,{children:F("img",{src:tw,alt:"Voltar",onClick:()=>e("/")})})},rw=We.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
