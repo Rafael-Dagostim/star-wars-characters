@@ -11,7 +11,7 @@ export const SearchBar = ({ onChange }: Prop) => {
   return (
     <SearchBarStyle>
       <SearchIconStyle src={SearchIconSvg} />
-      <SearchInputStyle placeholder='Digite o nome do personagem' onChange={(event) => onChange(event.target.value)} />
+      <SearchInputStyle placeholder='Personagem' onChange={(event) => onChange(event.target.value)} />
     </SearchBarStyle>
   )
 }
