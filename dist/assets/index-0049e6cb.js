@@ -236,7 +236,7 @@ Error generating stack: `+i.message+`
 `,Jv=We.img`
   width: 1rem;
   height: 1rem;
-`,qv="/star-wars-characters/assets/SearchIcon-9df3a13a.svg",Zv=({onChange:e})=>tt(Yv,{children:[U(Jv,{src:qv}),U(Xv,{placeholder:"Digite o nome do personagem",onChange:t=>e(t.target.value)})]}),Ba=()=>{const e=x.useContext($h);if(!e)throw new Error("OUT_OF_CONTEXT");return e},bv=We.section`
+`,qv="/star-wars-characters/assets/SearchIcon-9df3a13a.svg",Zv=({onChange:e})=>tt(Yv,{children:[U(Jv,{src:qv}),U(Xv,{placeholder:"Personagem",onChange:t=>e(t.target.value)})]}),Ba=()=>{const e=x.useContext($h);if(!e)throw new Error("OUT_OF_CONTEXT");return e},bv=We.section`
   width: 100%;
   height: 100%;
   gap: 2rem;
