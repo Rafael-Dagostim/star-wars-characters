@@ -34,15 +34,12 @@ export const SwApiProvider = ({ children }: ProviderProps) => {
     for (let i = INITIAL_PAGE; i <= TOTAL_PAGES; i++) {
       try {
         data.push(...await swapiApiService.getCharactersByPage(i));
+        data.forEach((c) => c.name = c.name.toLowerCase())
         setCharacters(data);
       } catch (error) {
         toast.error(`Falha ao buscar página ${i} de personagens: ${(error as Error).message}`)
       }
     }
-    console.log(characters.map(c => c.gender).reduce((prev, curr) => {
-      if (!prev.includes(curr)) prev.push(curr)
-      return prev
-    }, [] as string[]))
   }
 
   useEffect(() => {
