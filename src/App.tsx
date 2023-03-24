@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       <SwApiProvider>
         <Routes>
-          <Route path='character/:index' element={<CharacterInfo />} />
           <Route path='/*' element={<Home />} />
+          <Route path='character/:index' element={<CharacterInfo />} />
         </Routes>
       </SwApiProvider>
     </div>
