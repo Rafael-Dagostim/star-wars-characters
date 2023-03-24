@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
 export const CharacterListStyle = styled.section`
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 50%;
+  width: 40rem;
+  max-height: 31rem;
   overflow: auto;
+
+  @media screen and (max-width: 768) {
+    width: 100%;
+  }
 `

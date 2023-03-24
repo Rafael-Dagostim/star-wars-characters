@@ -10,17 +10,16 @@ import { Character } from '../../types';
 import { CharacterInfoStyle } from './style';
 
 export const CharacterInfo = () => {
+  const { characters, isLoadingCharacters } = useSwapiApiContext();
   const [character, setCharacter] = useState<Character | null>(null)
   const navigate = useNavigate();
   const { index } = useParams();
-  const { characters, isLoadingCharacters } = useSwapiApiContext();
 
   useEffect(() => {
-    if (!isLoadingCharacters) {
-      if (!characters[Number(index)]) navigate('/notFound')
+    if (characters[Number(index)]) {
       setCharacter(characters[Number(index)])
     }
-  }, [isLoadingCharacters])
+  }, [characters])
 
   return (
     <CharacterInfoStyle>
