@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Character } from '../../types'
-import { CharacterItemStyle } from './style'
+import { CharacterItemStyle, LinkStyle } from './style'
 
 interface Props {
   character: Character
@@ -11,9 +11,9 @@ interface Props {
 export const CharacterItem = ({ character, index }: Props) => {
   return (
     <CharacterItemStyle>
-      <Link to={`character/${index}`}>
+      <LinkStyle to={`character/${index}`}>
         <p>{character.name}</p>
-      </Link>
+      </LinkStyle>
     </CharacterItemStyle>
   )
 }

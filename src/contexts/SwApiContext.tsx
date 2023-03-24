@@ -37,8 +37,12 @@ export const SwApiProvider = ({ children }: ProviderProps) => {
         setCharacters(data);
       } catch (error) {
         toast.error(`Falha ao buscar página ${i} de personagens: ${(error as Error).message}`)
-      }      
+      }
     }
+    console.log(characters.map(c => c.gender).reduce((prev, curr) => {
+      if (!prev.includes(curr)) prev.push(curr)
+      return prev
+    }, [] as string[]))
   }
 
   useEffect(() => {

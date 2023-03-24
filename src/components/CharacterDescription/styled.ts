@@ -23,7 +23,11 @@ export const CharacterDescriptionStyle = styled.section`
   }
 
   @media screen and (min-width: 481px) and (max-width: 768px) {
-    width: 90%;
+    width: 30rem;
+
+    section {
+      flex-direction: column;
+    }
   }
 
   @media screen and (max-width: 480px) {

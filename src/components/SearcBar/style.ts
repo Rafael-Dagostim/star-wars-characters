@@ -12,7 +12,7 @@ export const SearchBarStyle = styled.section`
   background-color: none;
 
   @media screen and (max-width: 480px) {
-    width: 100%;
+    width: 90%;
   }
 `
 
@@ -28,6 +28,10 @@ export const SearchInputStyle = styled.input.attrs({ type: 'string' })`
   ::placeholder {
     color: white;
     border: none;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: small;
   }
 `
 
