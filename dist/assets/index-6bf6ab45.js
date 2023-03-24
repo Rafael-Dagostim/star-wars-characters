@@ -187,7 +187,7 @@ Error generating stack: `+i.message+`
 `,Jv=Ze.img`
   width: 1rem;
   height: 1rem;
-`,Xv="/assets/SearchIcon-9df3a13a.svg",qv=({onChange:e})=>qe(Gv,{children:[j(Jv,{src:Xv}),j(Yv,{placeholder:"Digite o nome do personagem",onChange:t=>e(t.target.value)})]}),Ha=()=>{const e=x.useContext(Ih);if(!e)throw new Error("OUT_OF_CONTEXT");return e},Zv=Ze.section`
+`,Xv="/star-wars-characters/assets/SearchIcon-9df3a13a.svg",qv=({onChange:e})=>qe(Gv,{children:[j(Jv,{src:Xv}),j(Yv,{placeholder:"Digite o nome do personagem",onChange:t=>e(t.target.value)})]}),Ha=()=>{const e=x.useContext(Ih);if(!e)throw new Error("OUT_OF_CONTEXT");return e},Zv=Ze.section`
   width: 100%;
   height: 100%;
   display:flex;
@@ -265,7 +265,6 @@ Error generating stack: `+i.message+`
   display:flex;
   align-items: center;
   flex-direction:column;
-  justify-content: center;
   width:100vw;
   height:100vh;
   gap: 2rem;
