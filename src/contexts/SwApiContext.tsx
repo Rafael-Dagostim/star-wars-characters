@@ -29,11 +29,12 @@ export const SwApiProvider = ({ children }: ProviderProps) => {
   }
 
   const loadAllCharacters = async () => {
+    setCharacters([])
+    let data: Character[] = []
     for (let i = INITIAL_PAGE; i <= TOTAL_PAGES; i++) {
       try {
-        const data = await swapiApiService.getCharactersByPage(i)
-        data.forEach((c) => c.name = c.name.toLowerCase())
-        setCharacters((curr) => curr.concat(data));
+        data.push(...await swapiApiService.getCharactersByPage(i));
+        setCharacters(data);
       } catch (error) {
         toast.error(`Falha ao buscar página ${i} de personagens: ${(error as Error).message}`)
       }      
@@ -41,6 +42,7 @@ export const SwApiProvider = ({ children }: ProviderProps) => {
   }
 
   useEffect(() => {
+    console.log('AOPA');
     setIsLoadingCharacters(true);
     loadAllCharacters().then(() => setIsLoadingCharacters(false));
     loadAllFilms();

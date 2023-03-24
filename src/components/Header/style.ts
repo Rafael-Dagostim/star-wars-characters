@@ -17,4 +17,20 @@ export const HeaderStyle = styled.header`
     color: white;
     font-size: 3rem;
   }
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-family: StarJedi;
+      color: white;
+      font-size: 1.5rem;
+    }
+  }
 `
