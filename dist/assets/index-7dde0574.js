@@ -188,8 +188,8 @@ Error generating stack: `+i.message+`
   width: 1rem;
   height: 1rem;
 `,Xv="/assets/SearchIcon-9df3a13a.svg",qv=({onChange:e})=>qe(Gv,{children:[j(Jv,{src:Xv}),j(Yv,{placeholder:"Digite o nome do personagem",onChange:t=>e(t.target.value)})]}),Ha=()=>{const e=x.useContext(Ih);if(!e)throw new Error("OUT_OF_CONTEXT");return e},Zv=Ze.section`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display:flex;
   align-items: center;
   flex-direction:column;
@@ -270,8 +270,8 @@ Error generating stack: `+i.message+`
   height:100vh;
   gap: 2rem;
 `,aw=()=>{const[e,t]=x.useState(null),n=Ea(),{index:r}=Yy(),{characters:o,isLoadingCharacters:i}=Ha();return x.useEffect(()=>{console.log(i),console.log(o),i||(console.log(o[Number(r)]),console.log(!o[Number(r)]),o[Number(r)]||n("/notFound"),t(o[Number(r)]))},[i]),qe(uw,{children:[j(Ba,{}),i&&j(zh,{}),!i&&e&&qe(sm,{children:[j(nw,{character:e}),j(sw,{character:e})]})]})},cw=Ze.section`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
