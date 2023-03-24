@@ -5,6 +5,7 @@ export const HeaderStyle = styled.header`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 0.3rem;
   h1 {
     font-family: StarJediHollow;
     color: #D0E10C;

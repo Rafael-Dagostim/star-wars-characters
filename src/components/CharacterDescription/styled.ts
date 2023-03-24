@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const CharacterDescriptionStyle = styled.section`
   border: 3px #D0E10C solid;
+  width: 40rem;
   background-color: rgba(0, 4, 99, 30%);
   display: flex;
   flex-direction: column;
@@ -18,5 +19,18 @@ export const CharacterDescriptionStyle = styled.section`
 
   h1 {
     font-size: 2rem;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 90%;
+    section {
+      gap: 2rem;
+      flex-direction: column;
+    }
   }
 `

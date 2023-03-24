@@ -14,6 +14,7 @@ export const CharacterListStyle = styled.section`
   }
 
   @media screen and (max-width: 480px) {
+    max-height: 55vh;
     width: 100%;
   }
 `
