@@ -10,7 +10,7 @@ interface Props {
 export const CharacterList = ({ list }: Props) => {
   return (
     <CharacterListStyle>
-      {list.map((character, index) => <CharacterItem character={character} index={index} key={index} />)}
+      {list.map((character, index) => <CharacterItem character={character} key={index} />)}
     </CharacterListStyle>
   )
 }

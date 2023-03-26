@@ -12,13 +12,11 @@ import { CharacterInfoStyle } from './style';
 export const CharacterInfo = () => {
   const { characters, isLoadingCharacters } = useSwApiContext();
   const [character, setCharacter] = useState<Character | null>(null)
-  const navigate = useNavigate();
-  const { index } = useParams();
+  const { slug } = useParams();
 
   useEffect(() => {
-    if (characters[Number(index)]) {
-      setCharacter(characters[Number(index)])
-    }
+    const char = characters.find((c) => c.slug === slug);
+    if (char) setCharacter(char)
   }, [characters])
 
   return (

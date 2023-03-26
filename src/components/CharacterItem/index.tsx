@@ -5,13 +5,12 @@ import { CharacterItemStyle, LinkStyle } from './style'
 
 interface Props {
   character: Character
-  index: number
 }
 
-export const CharacterItem = ({ character, index }: Props) => {
+export const CharacterItem = ({ character }: Props) => {
   return (
     <CharacterItemStyle>
-      <LinkStyle to={`character/${index}`}>
+      <LinkStyle to={`character/${character.slug}`}>
         <p>{character.name}</p>
       </LinkStyle>
     </CharacterItemStyle>

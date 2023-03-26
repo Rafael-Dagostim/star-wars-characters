@@ -2,6 +2,7 @@ import { createContext, ReactNode, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { Character, Film } from '../types';
 import { swapiApiService } from '../services';
+import { removeAccent } from '../helpers';
 
 interface ContextProps {
   characters: Character[],
@@ -28,13 +29,18 @@ export const SwApiProvider = ({ children }: ProviderProps) => {
     setFilms(data);
   }
 
+  const formatNameAndSlug = (character: Character) => {
+    character.name = character.name.toLowerCase()
+    character.slug = removeAccent(character.name.replace(' ', '-'))
+  }
+
   const loadAllCharacters = async () => {
     setCharacters([])
     let data: Character[] = []
     for (let i = INITIAL_PAGE; i <= TOTAL_PAGES; i++) {
       try {
         data.push(...await swapiApiService.getCharactersByPage(i));
-        data.forEach((c) => c.name = c.name.toLowerCase())
+        data.forEach((c) => formatNameAndSlug(c))
         setCharacters(data);
       } catch (error) {
         toast.error(`Falha ao buscar página ${i} de personagens: ${(error as Error).message}`)

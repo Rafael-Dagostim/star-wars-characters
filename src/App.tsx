@@ -12,7 +12,7 @@ function App() {
       <SwApiProvider>
         <Routes>
           <Route path='/*' element={<Home />} />
-          <Route path='character/:index' element={<CharacterInfo />} />
+          <Route path='character/:slug' element={<CharacterInfo />} />
         </Routes>
       </SwApiProvider>
     </div>
